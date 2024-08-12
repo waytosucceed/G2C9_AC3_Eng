@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class Activity 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="Logo_last.png">
+  <style>
+     body {
+            margin: 0;
+         
+        }
+
+        /* Style for the header */
+        .header {
+            position: fixed; /* Fixes the header at the top */
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 5px 5px 10px rgb(0, 0, 0);
+            padding-bottom: 10px;
+            background-color: white; /* Ensure the header background is solid */
+            z-index: 1000; /* Ensures the header stays above other content */
+        }
+    .activity {
+      width: 100%;
+      height: auto;
+      background-color: rgb(156, 225, 247);
+      display: flex;
+      justify-content: center;
+      padding-top: 25px;
+    }
+
+    .activity p {
+      font-size: 18px;
+    }
+
+    #img-area {
+      width: 40%;
+    }
+
+    #content-area {
+      width: 60%;
+    }
+
+    #heading {
+      font-family: Harrington;
+      font-size: 40px;
+      font-weight: bolder;
+    }
+
+    table,
+    th,
+    td {
+      border: 2px solid black;
+      padding: 12px;
+      font-size: 29px;
+    }
+
+    .sound-button {
+      cursor: pointer;
+      font-size: 24px;
+      border: none;
+      background: none;
+      /* color: blue; */
+      /* text-decoration: underline; */
+      margin-left: 5px;
+    }
+
+    .sound-button:hover {
+      text-decoration: none;
+    }
+    .backgroun{
+            background-image: url("border.png");
+            background-size: cover; /* Ensures the background image covers the section */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat;
+
+        }
+    .clickable-w {
+      cursor: pointer;
+      color: rgb(154, 34, 240); /* Optionally style the clickable "W" */
+    }
+    .clickable-wh {
+      cursor: pointer;
+      color: rgb(154, 34, 240); /* Optionally style the clickable "W" */
+    }
+  </style>
+</head>
+
+<body class="backgroun">
+  <audio id="sound-player" src="w.mp3"></audio>
+  <audio id="sound-player1" src="wh.mp3"></audio>
+  <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+    <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+    <span> <img src="header.png" width="30%" height="auto" class="img-responsive"></span>
+  </div>
+  <br>
+  <br>
+  <center>
+    <h1 id="heading" style="padding-top: 5%;">"W" and "Wh" words</h1> <br>
+  </center>
+  <div class="container text-center" style="font-size: 22px; padding-left: 15%;">
+    <p class="text-start">
+      <span style="color: rgb(154, 34, 240); font-weight: 600;"><u>Convention/Grammar</u></span><br><br> 
+      <span class="clickable-w btn btn-primary" style="font-size: 20px; color:white">"W"</span> Words:<br> 
+These words start with a soft, whisper-like sound. 
+<br>Your lips make a round shape, like you're about to blow a bubble. 
+<br><b>Examples</b>: water, wolf, wish, wind 
+<br><b>Rule</b>: When you see a word starting with just "w", make a gentle wind sound.
+<br><br>
+<span class="clickable-wh btn btn-primary" style="font-size: 20px; color:white">"Wh"</span> Words: 
+<br>These words start with a little puff of air, like blowing out a candle. 
+<br>They often help us ask questions. 
+<br><b>Examples</b>: what, where, why, who, which 
+<br><b>Rule</b>: When you see a word starting with "wh", give a little extra breath at the beginning.
+<br><br>
+<b>Rules for “wh” words:</b>
+<br>
+<br><b>What</b>: This is how we ask about things we see or hear.
+<br><b>Where</b>: This word helps us find out about places. 
+<br><b>Why</b>: This word is used for giving or talking about a reason for something.
+<br><b>Who</b>: This word is used in questions to ask somebody’s name, identity, position, etc.
+<br><b>Which</b>: This word is used for saying exactly what thing or things you are talking about.
+    </p>
+   
+    <br>
+    <a href="fun_time.html" class="btn btn-primary mb-5 btn-lg- text-center"
+      style="height: 50px; width: 200px; font-size: 22px;">Word Meanings</a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the sound player and the clickable "W" letter
+      var soundPlayer = document.getElementById('sound-player');
+      var clickableW = document.querySelector('.clickable-w');
+      
+      // Add a click event listener to the clickable "W" letter
+      if (clickableW) {
+        clickableW.addEventListener('click', function () {
+          soundPlayer.play();
+        });
+      }
+
+      
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the sound player and the clickable "W" letter
+      
+
+      var soundPlayer = document.getElementById('sound-player1');
+      var clickableW = document.querySelector('.clickable-wh');
+      
+      // Add a click event listener to the clickable "W" letter
+      if (clickableW) {
+        clickableW.addEventListener('click', function () {
+          soundPlayer.play();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
